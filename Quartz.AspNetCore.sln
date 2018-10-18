@@ -8,11 +8,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{91FC2CB3-C370-4581-B9A5-A39287E096F8}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSample", "samples\ConsoleSample\ConsoleSample.csproj", "{EA0AD35A-5922-4A29-9248-F9AA56D10748}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{F1ADE690-CD66-4FF8-A200-7FEB5B9C7E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreSample", "samples\AspNetCoreSample\AspNetCoreSample.csproj", "{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,12 +31,17 @@ Global
 		{EA0AD35A-5922-4A29-9248-F9AA56D10748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA0AD35A-5922-4A29-9248-F9AA56D10748}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA0AD35A-5922-4A29-9248-F9AA56D10748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EA0AD35A-5922-4A29-9248-F9AA56D10748} = {F1ADE690-CD66-4FF8-A200-7FEB5B9C7E4D}
+		{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30} = {F1ADE690-CD66-4FF8-A200-7FEB5B9C7E4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8AD6894F-B305-475F-AC61-A94EFA2D41D5}

@@ -1,5 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Quartz.AspNetCore.Logging;
 using Quartz.Impl;
+using Quartz.Logging;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -22,7 +25,8 @@ namespace Quartz.AspNetCore
 			var serverSched = new StdSchedulerFactory(builder.Properties).GetScheduler().Result;
 			builder.Services.AddSingleton(serverSched);
 			builder.Services.AddTransient<ISchedulerFactory, StdSchedulerFactory>();
-
+			builder.Services.AddTransient<ISchedulerFactory, StdSchedulerFactory>();
+			builder.Services.AddTransient<LoggingProvider>();
 			return services;
 		}
 
@@ -58,9 +62,18 @@ namespace Quartz.AspNetCore
 
 		public static IServiceProvider UseQuartz(this IServiceProvider provider)
 		{
+			LogProvider.SetCurrentLogProvider(provider.GetRequiredService<LoggingProvider>());
 			var sched = provider.GetRequiredService<IScheduler>();
 			sched.Start();
 			return provider;
+		}
+
+		public static IApplicationBuilder UseQuartz(this IApplicationBuilder builder)
+		{
+			LogProvider.SetCurrentLogProvider(builder.ApplicationServices.GetRequiredService<LoggingProvider>());
+			var sched = builder.ApplicationServices.GetRequiredService<IScheduler>();
+			sched.Start();
+			return builder;
 		}
 	}
 }

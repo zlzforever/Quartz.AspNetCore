@@ -6,6 +6,8 @@ using Quartz.AspNetCore;
 using System.Collections.Specialized;
 using Quartz;
 using System.Threading.Tasks;
+using Quartz.Logging;
+using Quartz.AspNetCore.Logging;
 
 namespace ConsoleSample
 {
@@ -13,9 +15,12 @@ namespace ConsoleSample
 	{
 		static void Main(string[] args)
 		{
+			Console.WriteLine("Choose 1, 2:");
 			Console.WriteLine("[1] UseMemoryStore");
 			Console.WriteLine("[2] UseMemoryStore");
+
 			var store = Console.ReadLine();
+
 			if (store.Trim() == "1")
 			{
 				UseMemoryStore().Wait();
@@ -32,11 +37,10 @@ namespace ConsoleSample
 		static async Task UseMemoryStore()
 		{
 			IServiceCollection services = new ServiceCollection();
-			services.AddLogging(options =>
-			{
-				options.AddConsole();
-				options.AddSerilog();
-			});
+			var loggerFactory = new LoggerFactory();
+			loggerFactory.AddConsole(Microsoft.Extensions.Logging.LogLevel.Trace);
+			services.AddSingleton<ILoggerFactory>(loggerFactory);
+
 			services.AddQuartz(options =>
 			{
 				options.UseMemoryStore();
@@ -54,11 +58,10 @@ namespace ConsoleSample
 		static async Task UseSqlServer()
 		{
 			IServiceCollection services = new ServiceCollection();
-			services.AddLogging(options =>
-			{
-				options.AddConsole();
-				options.AddSerilog();
-			});
+			var loggerFactory = new LoggerFactory();
+			loggerFactory.AddConsole(Microsoft.Extensions.Logging.LogLevel.Trace);
+			services.AddSingleton<ILoggerFactory>(loggerFactory);
+
 			services.AddQuartz(options =>
 			{
 				options.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=QUARTZ;Integrated Security=True");
