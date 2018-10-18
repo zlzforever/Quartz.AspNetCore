@@ -1,8 +1,13 @@
 # Quartz.AspNetCore
 
+[![NuGet](https://img.shields.io/nuget/v/Quartz.AspNetCore.svg)](https://www.nuget.org/packages/Quartz.AspNetCore)
+
 A package to help you use Quartz.NET in Asp.Net core by DI easily
 
+#### Installation
 
++ Package Manager: Install-Package Quartz.AspNetCore -Version 1.0.1
++ .NET CLI: dotnet add package Quartz.AspNetCore --version 1.0.1
 
 #### UseMemoryStore
 
