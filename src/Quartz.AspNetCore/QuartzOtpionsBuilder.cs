@@ -6,11 +6,10 @@ using System.Text;
 
 namespace Quartz.AspNetCore
 {
-	public class QuartzOtpionsBuilder
+	public class QuartzOptionsBuilder
 	{
 		public IServiceCollection Services { get; set; }
 
-		internal NameValueCollection Properties { get; set; }
-
+		public NameValueCollection Properties { get; set; }
 	}
 }

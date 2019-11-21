@@ -1,24 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>zlzforever@163.com</Authors>
-    <Title>Quartz.AspNetCore</Title>
-    <Company>ZCheJian</Company>
-    <PackageProjectUrl>https://github.com/zlzforever/Quartz.AspNetCore</PackageProjectUrl>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
-    <Copyright>2018 ZCheJian</Copyright>
-    <RepositoryUrl>https://github.com/zlzforever/Quartz.AspNetCore</RepositoryUrl>
-    <PackageTags>Quartz, AspNetCore</PackageTags>
-    <Description>A package to help you use Quartz.NET in Asp.Net core by DI easily</Description>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>1.0.1</Version>
-  </PropertyGroup>
+  <Import Project="../../package.props" />
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.1" />
     <PackageReference Include="Quartz" Version="3.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DDL" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="DDL\MySql.sql" />
+    <EmbeddedResource Include="DDL\MySql.sql" />
+    <None Remove="DDL\SqlServer.sql" />
+    <EmbeddedResource Include="DDL\SqlServer.sql" />
   </ItemGroup>
 </Project>

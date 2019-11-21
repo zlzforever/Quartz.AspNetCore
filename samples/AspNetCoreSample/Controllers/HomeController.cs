@@ -9,60 +9,40 @@ using Quartz;
 
 namespace AspNetCoreSample.Controllers
 {
-	class MemorySimpleJob : IJob
-	{
-		public virtual Task Execute(IJobExecutionContext context)
-		{
-			JobKey jobKey = context.JobDetail.Key;
-			Console.WriteLine(string.Format("MemorySimpleJob says: {0} executing at {1}", jobKey, DateTime.Now.ToString("r")));
-			return Task.CompletedTask;
-		}
-	}
 
 
-	public class HomeController : Controller
-	{
-		private readonly IScheduler _sched;
 
-		public HomeController(IScheduler sched)
-		{
-			_sched = sched;
-		}
+    public class HomeController : Controller
+    {
 
-		public IActionResult Index()
-		{
+        public IActionResult Index()
+        {
+            return View();
+        }
 
-			var job1 = JobBuilder.Create<MemorySimpleJob>().WithIdentity("job1").Build();
-			var trigger1 = TriggerBuilder.Create().WithIdentity("trigger1").WithCronSchedule("*/5 * * * * ?").Build();
+        public IActionResult About()
+        {
+            ViewData["Message"] = "Your application description page.";
 
-			_sched.ScheduleJob(job1, trigger1).Wait();
+            return View();
+        }
 
-			return View();
-		}
+        public IActionResult Contact()
+        {
+            ViewData["Message"] = "Your contact page.";
 
-		public IActionResult About()
-		{
-			ViewData["Message"] = "Your application description page.";
+            return View();
+        }
 
-			return View();
-		}
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
-		public IActionResult Contact()
-		{
-			ViewData["Message"] = "Your contact page.";
-
-			return View();
-		}
-
-		public IActionResult Privacy()
-		{
-			return View();
-		}
-
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult Error()
-		{
-			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-		}
-	}
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
+        }
+    }
 }

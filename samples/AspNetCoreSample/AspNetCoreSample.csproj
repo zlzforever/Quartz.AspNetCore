@@ -7,9 +7,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Dapper" Version="2.0.30" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Quartz.AspNetCore.MySqlConnector\Quartz.AspNetCore.MySqlConnector.csproj" />
     <ProjectReference Include="..\..\src\Quartz.AspNetCore\Quartz.AspNetCore.csproj" />
   </ItemGroup>
 

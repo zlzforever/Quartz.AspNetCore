@@ -7,7 +7,6 @@ using System.Collections.Specialized;
 using Quartz;
 using System.Threading.Tasks;
 using Quartz.Logging;
-using Quartz.AspNetCore.Logging;
 
 namespace ConsoleSample
 {

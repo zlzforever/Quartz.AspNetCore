@@ -7,8 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quartz.AspNetCore", "src\Qu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{91FC2CB3-C370-4581-B9A5-A39287E096F8}"
 	ProjectSection(SolutionItems) = preProject
-		LICENSE = LICENSE
+		LICENSE.txt = LICENSE.txt
 		README.md = README.md
+		publish_myget_packages.sh = publish_myget_packages.sh
+		package.props = package.props
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSample", "samples\ConsoleSample\ConsoleSample.csproj", "{EA0AD35A-5922-4A29-9248-F9AA56D10748}"
@@ -16,6 +18,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{F1ADE690-CD66-4FF8-A200-7FEB5B9C7E4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreSample", "samples\AspNetCoreSample\AspNetCoreSample.csproj", "{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quartz.AspNetCore.MySqlConnector", "src\Quartz.AspNetCore.MySqlConnector\Quartz.AspNetCore.MySqlConnector.csproj", "{2AB44CF7-8C3C-4145-AF74-1CBD330E69DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,10 @@ Global
 		{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0B305BC-CA4C-4193-86BA-9ADCBFC50C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB44CF7-8C3C-4145-AF74-1CBD330E69DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB44CF7-8C3C-4145-AF74-1CBD330E69DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB44CF7-8C3C-4145-AF74-1CBD330E69DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB44CF7-8C3C-4145-AF74-1CBD330E69DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

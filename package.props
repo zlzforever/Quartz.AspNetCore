@@ -1,0 +1,27 @@
+
+
+<Project>
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>zlzforever@163.com</Authors>
+        <Title>Quartz.AspNetCore</Title>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+        <Company>zchejian</Company>
+        <PackageProjectUrl>https://github.com/zlzforever/Quartz.AspNetCore</PackageProjectUrl>
+        <Copyright>2019 zchejian</Copyright>
+        <RepositoryUrl>https://github.com/zlzforever/Quartz.AspNetCore</RepositoryUrl>
+        <PackageTags>Quartz, AspNetCore</PackageTags>
+        <Description>A package to help you use Quartz.NET in Asp.Net core by DI easily</Description>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Version>1.0.3</Version>
+        <FileVersion>1.0.3</FileVersion>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+<ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+</ItemGroup>
+
+</Project>
