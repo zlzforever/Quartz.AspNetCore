@@ -1,5 +1,3 @@
-
-
 <Project>
 
     <PropertyGroup>
@@ -15,8 +13,8 @@
         <PackageTags>Quartz, AspNetCore</PackageTags>
         <Description>A package to help you use Quartz.NET in Asp.Net core by DI easily</Description>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <Version>1.0.3</Version>
-        <FileVersion>1.0.3</FileVersion>
+        <Version>1.0.4</Version>
+        <FileVersion>1.0.4</FileVersion>
         <LangVersion>latest</LangVersion>
     </PropertyGroup>
 

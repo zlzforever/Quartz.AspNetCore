@@ -1,12 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Serilog;
 using System;
 using Quartz.AspNetCore;
-using System.Collections.Specialized;
 using Quartz;
 using System.Threading.Tasks;
-using Quartz.Logging;
 
 namespace ConsoleSample
 {
